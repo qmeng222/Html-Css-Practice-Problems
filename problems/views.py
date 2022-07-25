@@ -1,16 +1,12 @@
 from django.shortcuts import render
 from problems.models import Person
-from django.contrib.auth.models import User
-
-from prettyprinter import cpprint, install_extras
-
-install_extras(exclude=['attrs', 'ipython', 'ipython_repr_pretty'])
 
 # problem lists
 show_information_problems = [4]
 names_problems = list(range(5, 12)) + list(range(19, 23))
 people_problems = list(range(23, 42))
 user_problems = [12]
+
 
 # /problems
 def show_problem_list(request):
@@ -46,6 +42,5 @@ def show_problem(request, problem_number):
 
     # This prints out the context in a pretty way.
     print("=" * 10, "Context", "=" * 10)
-    cpprint(context)
 
     return render(request, f"problems/{template_name}", context)
