@@ -6,8 +6,11 @@
 
 /* Start CSS class rule: */
 /* .error { */
+.error {
+  color: red;
+}
 
-  /* color: red; */
+/* color: red; */
 
 /* End CSS class rule: */
 /* } */
